@@ -1,6 +1,4 @@
-git init
-echo ".devcontainer" >> .gitignore
-echo "*.pyc" >> .gitignore
-echo "__pycache__/" >> .gitignore
-
+.devcontainer
+*.pyc
+src/__pycache__/*
 node_modules
