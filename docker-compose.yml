@@ -1,0 +1,11 @@
+services:
+  python-app:
+    build: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "5001:5000"
+    working_dir: /app
+    command: python src/main.py
+    environment:
+      - PYTHONUNBUFFERED=1

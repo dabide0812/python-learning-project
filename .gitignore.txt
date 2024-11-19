@@ -1,0 +1,4 @@
+git init
+echo ".devcontainer" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo "__pycache__/" >> .gitignore
