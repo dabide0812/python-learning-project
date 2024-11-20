@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/css/output.css" rel="stylesheet">
-    <title>Python learning</title>
+    <title>Python Learning</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white">
     <div class="flex items-center justify-center min-h-screen px-4">
         <div class="text-center bg-gray-800 p-8 rounded-lg shadow-lg max-w-2xl w-full">
-            <p class="mt-4 text-gray-400">Python Learning</p>
+            <p class="mt-4 text-gray-400"><a href="/" class="text-gray-400 hover:text-gray-200">Python Learning</a></p>
             
             <div class="mt-8 text-left">
-                <h2 class="text-2xl font-semibold text-gray-200">Output Result:</h2>
-                <div class="mt-4 bg-gray-700 p-4 rounded-md overflow-auto">
-                    <pre class="text-gray-100 font-mono">{{ output | safe }}</pre>
+                <h2 class="text-2xl font-semibold text-gray-200">Learning Record:</h2>
+                <div class="mt-4 bg-gray-700 p-4 rounded-md">
+                    <!-- 動的にリンクリストを生成 -->
+                    <ul>
+                        {% for route in routes %}
+                            <li class="mt-2">
+                                <a href="{{ route.path }}" 
+                                   class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-600 rounded transition duration-200">
+                                    {{ route.name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
