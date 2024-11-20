@@ -3,19 +3,40 @@ class StringService:
 
         #演算処理関連の動作確認実施
         output = ''
-        output = output + '足し算<br>'
-        output = output + '7 + 2 = ' + str( 7 + 2 ) + '<br><br>'
-        output = output + '引き算<br>'
-        output = output + '7 - 2 = ' + str( 7 - 2 ) + '<br><br>'
-        output = output + '掛け算<br>'
-        output = output + '7 * 2 = ' + str( 7 * 2 ) + '<br><br>'
-        output = output + 'べき乗<br>'
-        output = output + '7 ** 2 = ' + str( 7 ** 2 ) + '<br><br>'
-        output = output + '割り算<br>'
-        output = output + '7 / 2 = ' + str( 7 / 2 ) + '<br><br>'
-        output = output + '整数除算<br>'
-        output = output + '7 // 2 = ' + str( 7 // 2 ) + '<br><br>'
+        output = output + '実数での除算<br>'
+        output = output + '7 / 1 = ' + str( 7 / 1 ) + '<br>'
+        output = output + '7 / 2 = ' + str( 7 / 2 ) + '<br>'
+        output = output + '1 / 3 = ' + str( 1 / 3 ) + '<br>'
+        output = output + '1 / 1 = ' + str( 1 / 1 ) + '<br>'
+        output = output + '<br>'
+        output = output + '整数での除算<br>'
+        output = output + '7 // 1 = ' + str( 7 // 1 ) + '<br>'
+        output = output + '7 // 2 = ' + str( 7 // 2 ) + '<br>'
+        output = output + '1 // 3 = ' + str( 1 // 3 ) + '<br>'
         output = output + '余剰<br>'
-        output = output + '7 % 2 = ' + str( 7 % 2 ) + '<br><br>'
+        output = output + '7 % 1 = ' + str( 7 % 1 ) + '<br>'
+        output = output + '7 % 2 = ' + str( 7 % 2 ) + '<br>'
+        output = output + '1 % 3 = ' + str( 1 % 3 ) + '<br>'
+        output = output + '1 % 1 = ' + str( 1 % 1 ) + '<br>'
+        output = output + '999 % 1000 = ' + str( 999 % 1000 ) + '<br>'
+        
+        output = output + '<br>'
+
+        output = output + 'ゼロ除算<br>'
+        try:
+            output = output + '1 / 0 = ' + str( 1 / 0 ) + '<br>'
+        except ZeroDivisionError as e:
+            output = output + '1 / 0 = ' + str(e) + '<br>'
+
+        try:
+            output = output + '1 // 0 = ' + str( 1 // 0 ) + '<br>'
+        except ZeroDivisionError as e:
+            output = output + '1 // 0 = ' + str(e) + '<br>'
+
+        try:
+            output = output + '1 % 0 = ' + str( 1 % 0 ) + '<br>'
+        except ZeroDivisionError as e:
+            output = output + '1 % 0 = ' + str(e) + '<br>'
+            
 
         return output
